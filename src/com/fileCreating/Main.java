@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        testTicTacToe();
+        testDeck();
     }
 
     public static void findThePrime(int x){
@@ -128,4 +128,41 @@ public class Main {
                 {" ","X","X"}
         }));
     }
+
+    public static void testCalculator(){
+
+        CrummyCal calc = new CrummyCal();
+
+        calc.add(750);
+        calc.substract(420);
+        calc.multiply(13);
+        calc.divide(30);
+
+        System.out.println(calc.getAnswer());
+
+        calc.clear();
+        calc.add(1000);
+        System.out.println(calc.getAnswer());
+    }
+
+    public static void testStrMultiply(){
+        CarlsProblems2 carl = new CarlsProblems2();
+        System.out.println(carl.strMultiply("abc", 5));
+    }
+
+    public static void testPalindrom(){
+        System.out.println(CarlsProblems2.palindrome("tattarattat"));
+    }
+
+    public static void testCards(){
+        CarlsProblems2.deckOfCards();
+    }
+
+    public static void testDeck(){
+        Deck deck = new Deck();
+
+        deck.pickCards("Club");
+        System.out.println(deck.toString());
+    }
+
 }
