@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        testDeck();
+        testMergeSort();
     }
 
     public static void findThePrime(int x){
@@ -163,6 +163,15 @@ public class Main {
 
         deck.pickCards("Club");
         System.out.println(deck.toString());
+    }
+
+    public static void testMergeSort(){
+
+        MergeSort mergeSorting = new MergeSort();
+        int[] numList = mergeSorting.randArray(30);
+
+        //int[] numList = {8,4,3,7,5,6,1};
+        mergeSorting.mergeSort(numList);
     }
 
 }
