@@ -1,12 +1,13 @@
 package com.fileCreating;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        testMergeSort();
+        testSumNumbers();
     }
 
     public static void findThePrime(int x){
@@ -165,12 +166,16 @@ public class Main {
         System.out.println(deck.toString());
     }
 
+    public static void testSumNumbers(){
+        File file = new File("numbers.txt");
+        FindPrimeNumber.sumFileNumbers(file);
+    }
+
     public static void testMergeSort(){
 
         MergeSort mergeSorting = new MergeSort();
         int[] numList = mergeSorting.randArray(30);
 
-        //int[] numList = {8,4,3,7,5,6,1};
         mergeSorting.mergeSort(numList);
     }
 

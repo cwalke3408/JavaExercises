@@ -1,9 +1,11 @@
 package com.fileCreating;
 
-import java.lang.reflect.Array;
+import java.io.File;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class FindPrimeNumber {
 
@@ -295,6 +297,30 @@ public class FindPrimeNumber {
         return "none";
     }
 
+    /* Sum Numbers( using numbers.txt)
+            numbers.txt has a bunch of random numbers and the goal of this
+            challenge is to sum all the digits of all the numbers to come up with the final result.
+    */
+    public static void sumFileNumbers(File file){
 
+        Scanner scanner = new Scanner(System.in);
+        BigInteger bigInteger = new BigInteger("0");
+
+        try{
+            scanner = new Scanner(file);
+
+            while(scanner.hasNextLine()){
+                String line = scanner.nextLine();
+                bigInteger = bigInteger.add(new BigInteger(line));
+            }
+        } catch(Exception e){
+        } finally{
+            scanner.close();
+        }
+
+        System.out.println("FINAL SUM from file numbers.txt");
+        System.out.println(bigInteger);
+
+    }
 }
 
